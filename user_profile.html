@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Valley Cold Store</title>
+  <link rel="icon" href="images/fav.png" />
+  <!-- Bootstrap Core CSS -->
+  <link href="css/hover-min.css" rel="stylesheet" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="owl/owl.carousel.min.css" rel="stylesheet" />
+  <link href="owl/owl.theme.default.min.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link href="css/main.css" rel="stylesheet" />
+  <!-- Scripts -->
+  <script src="js/jquery3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/2d4e532760.js"></script>
+  <script>
+   /* $(window).scroll(function () {
+      if ($(this).scrollTop() > 5) {
+        $('.header').addClass('fixed-header');
+      } else {
+        $('.header').removeClass('fixed-header');
+      }
+    });*/
+    function openSearch() {
+      $('#search-bar').css('bottom', '0');
+    }
+    function hideSearch() {
+      $('#search-bar').css('bottom', '-150px');
+    }
+    function showMenu() {
+      $('#mobile-side').css('left', '0');
+      console.log('clicked')
+    }
+    function hideMenu() {
+      $('#mobile-side').css('left', '-310px');
+    }
+    function showCart() {
+      $('#cart-id').css('right', '0');
+      console.log('clicked')
+    }
+    function hideCart() {
+      $('#cart-id').css('right', '-400px');
+    }
+    function showSignup() {
+      $('#sign-up').css('display', 'block');
+      console.log('clicked')
+    }
+    function hideSignup() {
+      $('#sign-up').css('display', 'none');
+    }
+  </script>
+</head>
+
+<body>
+  <header class="header smooth">
+      <div class="dark-bg">
+        <div class="header-top container">
+            <div class="row">
+              <div class="col-lg-8 offset-lg-2">
+                <div class="text-center header-top-left">
+                  <a href="tel: +977-1-4414702 | 4811683" class="top-contact contact-phone">+977 1 4414702 | 4811683</a>
+                  <a href="mailto: company@email.com" class="top-contact contact-mail">company@wmail.com</a>
+                  <a href="https://goo.gl/maps/57HpUuP6T6oFhyXdA" target="_blank" class="top-contact contact-loc">Nayabazar, Kathmandu</a>
+                </div>
+              </div>
+              <!-- socials -->
+              <div class="col-lg-2">
+                <div class="text-right">
+                    <a href="#" target="_blank" title="Facebook" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank" title="Twitter" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" title="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+                
+              </div>
+            </div> 
+        </div>
+      </div>
+      <!-- logo and navigations -->
+      <div class="nav-header">
+        <div class="container">
+            <div class="row">
+              <div class="col-lg-2 logo-col col-6 logo-wrapper">
+                <a href="#" class="logo-anchor">
+                  <img src="images/valley-cold-store-logo.png" alt="logo" class="logo-img smooth">
+                </a>
+              </div>
+              <!-- navigations -->
+              <div class="col-lg-10 col-6 main-navs smooth">
+                <ul class="nav custom-nav" id="mobile-side">
+                  <li class="close-btn"><a href="javascript:;" onclick="hideMenu()">&times</a></li>
+                  <li><a href="#" class="active">Home</a></li>
+                  <li><a href="#">Our Products</a></i></li>
+                  <li><a href="#">Why Us</a></li>
+                  <li><a href="#">How To Cook</a> </li>
+                  <li><a href="#">Blogs</a></li>
+                  <li><a href="#">About</a></li>
+                  <li class="high-link"><a href="#" class="inquiry-link">QUICK INQUIRY</a></li>
+                </ul>
+                <div class="header-icons">
+                  <!-- login container  -->
+                  <div class="login-wrapper" >
+                    <div class="auth-icon header-icon">
+                      <div class="img-container">
+                        <img src="./images/matt.jpg" alt="" class="img-fitted">
+                      </div>
+                    </div>
+                    <div class="login" id="login-id">
+                        <div class="login-head">
+                          <h2 class="title-login gutter-bot-mid">My Account<span><div class="signup-link" onclick="showSignup()">- Signup</div></span></h2>
+                        </div>  
+                        <form action="">
+                            <div class="form-group">
+                              <input type="text" name="name" placeholder="Username or Email" value="" class="common-input">
+                            </div>
+                            <div class="form-group">
+                              <input type="password" name="name" placeholder="Password" value="" class="common-input">
+                            </div>
+                            <div class="form-actions gutter-top-mid">
+                              <button class="theme-btn">LOGIN</button><small><a class="auth-link" href="#"> Forgot password?</a></small>
+                            </div>
+                          </form>
+                      </div> 
+                  </div>
+                  <!-- cart container  -->
+                  <div class="cart-wrapper">
+                    <div class="cart-icon header-icon" onclick="showCart()"><i class="fas fa-shopping-bag"></i>
+                      <small class="cart-notify">0</small>
+                    </div>
+                    <div class="cart-wrap" id="cart-id">
+                      <div class="cart-overview">
+                        <div class="close-cart-btn" onclick="hideCart()">
+                          <i class="fas fa-times"></i>
+                        </div>
+                        <div class="cart-title flexer align-items-center">
+                          <div class="cart-icon header-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                          </div>
+                          <h4 class="heading-">My Cart</h4><span class="theme-color"> - 1 Item</span>
+                        </div>
+                          <!-- cart list  -->
+                          <div class="cart-ow-in">
+                            <div class="cart-list">
+                              <div class="img-container">
+                                <img src="./images/products/chicks.jpg" alt="" class="img-fitted">
+                                <a class="remove-cart"><i class="fas fa-times"></i></a>
+                              </div>
+                              <div class="cart-detail">
+                                <div class="title heading-">Fresh whole Chicken</div>
+                                <small class="sm-bold">Quantity: <span  class="quantity">1 KG</span></small>
+                                <small class="sm-bold">Cost: <span  class="cost">400 * 1</span></small>
+                              </div>
+                            </div>
+                            <div class="cart-list">
+                              <div class="img-container">
+                                <img src="./images/products/chicks.jpg" alt="" class="img-fitted">
+                                <a class="remove-cart"><i class="fas fa-times"></i></a>
+                              </div>
+                              <div class="cart-detail">
+                                <div class="title heading-">Fresh whole Chicken</div>
+                                <small class="sm-bold">Quantity: <span  class="quantity">1 KG</span></small>
+                                <small class="sm-bold">Cost: <span  class="cost">400 * 1</span></small>
+                              </div>
+                            </div> 
+                          </div>
+                      </div>
+                      <!-- cart total  -->
+                        <div class="cart-summary">
+                          <div class="price-label">
+                            <div class="total gutter-bot-sm">TOTAL COST:</div>
+                            <small class="product-price">NRP</small><small class="product-price heading-"><span>400.00</span></small>
+                          </div>
+                          <button class="theme-btn btn-block gutter-top-sm">LOGIN</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mobile-menu-btn">
+                  <a href="javascript:;" onclick="showMenu()">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                      y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                      <g>
+                        <g>
+                          <path d="M491.318,235.318H20.682C9.26,235.318,0,244.577,0,256s9.26,20.682,20.682,20.682h470.636
+                      c11.423,0,20.682-9.259,20.682-20.682C512,244.578,502.741,235.318,491.318,235.318z" />
+                        </g>
+                      </g>
+                      <g>
+                        <g>
+                          <path d="M491.318,78.439H20.682C9.26,78.439,0,87.699,0,99.121c0,11.422,9.26,20.682,20.682,20.682h470.636
+                      c11.423,0,20.682-9.26,20.682-20.682C512,87.699,502.741,78.439,491.318,78.439z" />
+                        </g>
+                      </g>
+                      <g>
+                        <g>
+                          <path d="M491.318,392.197H20.682C9.26,392.197,0,401.456,0,412.879s9.26,20.682,20.682,20.682h470.636
+                      c11.423,0,20.682-9.259,20.682-20.682S502.741,392.197,491.318,392.197z" />
+                        </g>
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+       </div>
+    </div>
+  
+    <div class="search-bar smooth" id="search-bar" style="display:none">
+      <div class="container">
+        <form action="" class="search-form">
+          <button onclick="hideSearch()" class="search-cancel" title="Cancel Search">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px" y="0px" viewBox="0 0 475.2 475.2" style="enable-background:new 0 0 475.2 475.2;"
+              xml:space="preserve">
+              <g>
+                <g>
+                  <path d="M405.6,69.6C360.7,24.7,301.1,0,237.6,0s-123.1,24.7-168,69.6S0,174.1,0,237.6s24.7,123.1,69.6,168s104.5,69.6,168,69.6
+                 s123.1-24.7,168-69.6s69.6-104.5,69.6-168S450.5,114.5,405.6,69.6z M386.5,386.5c-39.8,39.8-92.7,61.7-148.9,61.7
+                 s-109.1-21.9-148.9-61.7c-82.1-82.1-82.1-215.7,0-297.8C128.5,48.9,181.4,27,237.6,27s109.1,21.9,148.9,61.7
+                 C468.6,170.8,468.6,304.4,386.5,386.5z" />
+                  <path
+                    d="M342.3,132.9c-5.3-5.3-13.8-5.3-19.1,0l-85.6,85.6L152,132.9c-5.3-5.3-13.8-5.3-19.1,0c-5.3,5.3-5.3,13.8,0,19.1
+                 l85.6,85.6l-85.6,85.6c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4l85.6-85.6l85.6,85.6c2.6,2.6,6.1,4,9.5,4
+                 c3.5,0,6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1l-85.4-85.6l85.6-85.6C347.6,146.7,347.6,138.2,342.3,132.9z" />
+                </g>
+              </g>
+            </svg>
+          </button>
+          <input type="text" placeholder="Search for anything...">
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <section class="inner-banner">
+    <div class="img-container">
+       <img src="./images/slides/slider-1.jpg" alt="banner image">
+    </div>
+    <div class="banner-title-wrap"></div>
+  </section>
+  <div class="container">
+    <div class="row no-gutters">
+      <div class="col-lg-3 col-md-4">
+        <div class="user-profile-wrap">
+          <div class="profile-img img-container">
+            <img src="./images/matt.jpg" alt="">
+          </div>
+          <div class="profile-info-overview">
+            <h4 class="heading-sm gutter-top-sm">Personal <span class="theme-color">Info</span></h4>
+            <div class="profile-info">
+              <div class="header-icon contact-phone"></div>
+              <b class="sm-text">9812345678</b>  
+            </div>
+            <div class="profile-info">
+              <div class="header-icon "><i class="fas fa-envelope"></i></div>
+              <b class="sm-text">username@email.com</b>  
+            </div>
+            <div class="profile-info">
+              <div class="header-icon "><i class="fas fa-map-marker-alt"></i></div>
+              <b class="sm-text">Nayabazar, Kathmandu</b>  
+            </div>
+            <button class="theme-btn gutter-top-mid gutter-bot-lg">EDIT PROFILE</button>
+          </div>
+        </div>
+        <div class="user-side-img">
+          <div class="img-container">
+            <img src="./images/products/chicks.jpg" alt="" class="img-fitted">
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-9 col-md-8">
+        <div class="dashboard-main">
+          <div class="welcome-wrap">
+            <div class="sub-heading">Hello!!</div>
+            <div class="heading-sm wt-">Demo Username</div>
+          </div>
+          <ul class="nav dashboard-nav">
+            <li><a href="#" class="active">Dashboard</a></li>
+            <li><a href="#">My Profile</a></i></li>
+            <li><a href="#">Order History</a></li>
+            <li><a href="#">Change Password</a> </li>
+            <li><a href="#"><i class="fas fa-sign-out-alt"></i></a> </li>
+           </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  
+  <footer class="dark-bg">
+    <div class="container pad-bot">
+      <div class="row footer-bottom">
+        <div class="col-lg-4 footer-bottom-col footer-about pad-top">
+            <h3 class="footer-title heading-footer">Valley Cold Store</h3>
+            <p>Valley Cold Store focuses only on Chicken range as it is a good source of protein and is much healthier to eat than red meat which is high in cholesterol. </p>
+            <ul class="social-nav nav social-list">
+              <li><a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+
+        <!-- stylish footer -->
+        <div class="col-lg-4 stylish-footer-col">
+          <div class="stylish-footer-in">
+             <!-- footer contact phone-->
+             <div class="footer-contact-row flexer">
+                <div class="contact-icon contact-phone"></div>
+                <div class="contact-overview">
+                  <span class="wt-">PHONE</span>
+                  <a href="tel:01-4353166, 4385132" rel="nofollow" class="wt- heading-">01-4353166, 4385132</a>
+                </div>
+             </div>
+              <!-- footer contact mail-->
+              <div class="footer-contact-row flexer">
+                <div class="contact-icon contact-mail"></div>
+                <div class="contact-overview">
+                  <span class="wt-">EMAIL</span>
+                  <a href="tel:01-4353166, 4385132" rel="nofollow" class="wt- heading-">info@valleygroup.com.np</a>
+                </div>
+             </div>
+
+              <!-- footer contact location-->
+              <div class="footer-contact-row flexer">
+                <div class="contact-icon contact-loc"></div>
+                <div class="contact-overview">
+                  <span class="wt-">LOCATION</span>
+                  <a href="https://goo.gl/maps/57HpUuP6T6oFhyXdA" rel="nofollow" target="_blank" class="wt- heading-">Nayabazar, Kathmandu</a>
+                </div>
+             </div>
+
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 footer-bottom-col pad-top">
+          <h3 class="footer-title heading-footer">Our Products</h3>
+          <ul class="nav footer-nav flex-column">
+            <li><a href="#">Fresh Chicken</a></li>
+            <li><a href="#">Boneless Chicken Meat</a></li>
+            <li><a href="#">Chicken Meatballs</a></li>
+            <li><a href="#">Chicken Dumplings</a></li>
+            <li><a href="#">Boneless Chicken Meat</a></li>
+            <!-- limit is 5 and after limit -->
+            <li><a href="#"><i class="fas fa-angle-double-right"></i>ALL PRODUCTS</a></li>
+          </ul>
+        </div>
+        
+    </div>
+  </div>
+  <div class="copyrights-wrap">
+    <div class="container text-center">
+      <p class="copyright-text">Copyrights 2020. All Rights Reserved. Site By: <a href="https://www.rewasoft.com.np/" target="_blank">REWA SOFT</a></p>
+    </div>
+  </div>
+  </footer>
+<!-- sign-up-form  -->
+<section class="sign-up" id="sign-up">
+  <div class="bg-overlay">
+    <div class="sign-up-wrapper">
+      <div class="row no-gutters">
+        <div class="col-md-6 sign-up-img">
+          <div class="img-container">
+            <img src="./images/products/boneless.JPG" alt="" class="img-fitted">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="sign-up-form">
+            <div class="close-cart-btn" onclick="hideSignup()">
+              <i class="fas fa-times"></i>
+            </div>
+            <h3 class="heading-sm gutter-bot-sm">New Account</h3>
+            <form action="">
+              <div class="form-group">
+                <input type="text" name="name" placeholder="Full name*" value="" class="common-input">
+              </div>
+              <div class="form-group">
+                <input type="text" name="name" placeholder="Email*" value="" class="common-input">
+              </div>
+              <div class="form-group">
+                <input type="text" name="name" placeholder="Phone Number*" value="" class="common-input">
+              </div>
+              <div class="form-group">
+                <input type="text" name="name" placeholder="Address*" value="" class="common-input">
+              </div>
+              <div class="form-group">
+                <input type="password" name="name" placeholder="Create Password*" value="" class="common-input">
+              </div>
+              <div class="form-actions gutter-top-mid">
+                <button class="theme-btn">SIGN UP</button><small><a class="auth-link" href="#"> Already have an Account??</a></small>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+</section>
+  
+  <!-- <script>
+    function loginToggle(){
+      var login= document.getElementById("login-pop");
+      login.classList.toggle('active');
+    }
+  </script> -->
+  <script>
+    $(".auth-icon").click(function(){
+      $(".login").toggleClass("active");
+    });
+    
+  </script>
+   
+ <!-- <script>
+    var captions = document.getElementsByClassName('main-caption');
+    for(i=0;i<captions.length;i++){
+      var texts = captions[i].innerHTML.split(' '),
+      last_word = texts[texts.length - 1],
+      splited_text = texts.splice(0,texts.length - 1).join(' ');
+      captions[i].innerHTML = `${splited_text} <span class="bold-word">${last_word}</span>`;
+    }
+  </script>
+  -->
+  <!-- owl sliders -->
+  <script src="owl/owl.carousel.min.js"></script>
+  <script>
+    // testimonials
+    $('#owl-tes').owlCarousel({
+      loop: false,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      responsiveClass: true,
+      rewind: true,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false
+        },
+        600: {
+          items: 1,
+          nav: false
+        },
+        1000: {
+          items: 1,
+          nav: false
+        }
+
+      }
+    });
+
+
+    // how-to-cook
+    $('#owl-cook').owlCarousel({
+      loop: false,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      responsiveClass: true,
+      rewind: true,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false
+        },
+        600: {
+          items: 1,
+          nav: false
+        },
+        1000: {
+          items: 1,
+          nav: false
+        }
+
+      }
+    });
+   
+ 
+  </script>
+<script>
+$('.tes-icon').append(
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 158.222">\
+  <g id="Group_21" data-name="Group 21" transform="translate(-618 -5496.778)">\
+    <circle id="Ellipse_21" data-name="Ellipse 21" cx="60" cy="60" r="60" transform="translate(618 5535)" fill="#353535"/>\
+    <path id="head-up" d="M21.589,13.425s-.31-8.181,6.182-11.219,9.89.623,9.89.623a11.66,11.66,0,0,1,4.946,10.6s9.969-2.338,13.6,3.739.618,10.6.618,10.6S43.766,41.083,40.135,43.343a25.731,25.731,0,0,1-4.946,3.116,9.5,9.5,0,0,1-7.417,0S7.172,28.32,6.753,27.137c-.387-1.091-1.778-5.688.617-9.349,0,0,2.628-4.908,8.037-4.986C15.407,12.8,19.194,13.269,21.589,13.425Z" transform="translate(649 5495.778)" fill="#353535" fill-rule="evenodd"/>\
+    <path id="Icon_awesome-quote-left" data-name="Icon awesome-quote-left" d="M37.2,20.209H30.787V15.078a5.136,5.136,0,0,1,5.131-5.131h.641a1.92,1.92,0,0,0,1.924-1.924V4.174A1.92,1.92,0,0,0,36.56,2.25h-.641A12.825,12.825,0,0,0,23.091,15.078V34.32a3.849,3.849,0,0,0,3.848,3.848H37.2A3.849,3.849,0,0,0,41.05,34.32V24.058A3.849,3.849,0,0,0,37.2,20.209Zm-23.091,0H7.7V15.078a5.136,5.136,0,0,1,5.131-5.131h.641a1.92,1.92,0,0,0,1.924-1.924V4.174A1.92,1.92,0,0,0,13.47,2.25h-.641A12.825,12.825,0,0,0,0,15.078V34.32a3.849,3.849,0,0,0,3.848,3.848H14.111a3.849,3.849,0,0,0,3.848-3.848V24.058A3.849,3.849,0,0,0,14.111,20.209Z"\
+     transform="translate(655.95 5574.419)" fill="#ffefef"/>\
+  </g>\
+</svg>'
+
+);
+
+$('.contact-phone').prepend(
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.372 41.45">\
+  <path id="Icon_feather-phone" data-name="Icon feather-phone"\
+   d="M41.536,31.784v5.788a3.858,3.858,0,0,1-4.206,3.858,38.179,38.179,0,0,1-16.649-5.923A37.62,37.62,0,0,1,9.106,23.932,38.179,38.179,0,0,1,3.183,7.206,3.858,3.858,0,0,1,7.023,3H12.81a3.858,3.858,0,0,1,3.858,3.318,24.771,24.771,0,0,0,1.35,5.421,3.858,3.858,0,0,1-.868,4.071L14.7,18.26A30.868,30.868,0,0,0,26.276,29.836l2.45-2.45a3.858,3.858,0,0,1,4.071-.868,24.771,24.771,0,0,0,5.421,1.35A3.858,3.858,0,0,1,41.536,31.784Z" \
+   transform="translate(-1.666 -1.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>\
+  </svg>'
+);
+
+$('.contact-mail').prepend(
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.389 36.769">\
+  <g id="Icon_feather-mail" data-name="Icon feather-mail" transform="translate(-0.911 -4.5)">\
+    <path id="Path_9" data-name="Path 9"\
+     d="M7.221,6H40.99a4.234,4.234,0,0,1,4.221,4.221V35.548a4.234,4.234,0,0,1-4.221,4.221H7.221A4.234,4.234,0,0,1,3,35.548V10.221A4.234,4.234,0,0,1,7.221,6Z" \
+     transform="translate(0 0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>\
+    <path id="Path_10" data-name="Path 10" d="M45.211,9,24.106,23.774,3,9" transform="translate(0 1.221)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>\
+  </g>\
+</svg>'
+);
+
+$('.contact-loc').prepend(
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.687 45.347">\
+  <g id="place" transform="translate(-48.886)">\
+    <g id="Group_5" data-name="Group 5" transform="translate(48.886)">\
+      <g id="Group_4" data-name="Group 4">\
+        <path id="Path_11" data-name="Path 11" d="M82.282,7.884a18.309,18.309,0,0,0-30.1,0,18.312,18.312,0,0,0-2.132,16.872A14.422,14.422,0,0,0,52.7,29.144L66.023,44.789a1.584,1.584,0,0,0,2.414,0l13.315-15.64a14.436,14.436,0,0,0,2.657-4.382A18.316,18.316,0,0,0,82.282,7.884ZM81.44,23.656a11.31,11.31,0,0,1-2.091,3.426l-.007.009L67.23,41.316,55.111,27.081a11.317,11.317,0,0,1-2.1-3.436A15.147,15.147,0,0,1,54.787,9.688a15.138,15.138,0,0,1,24.886,0A15.15,15.15,0,0,1,81.44,23.656Z" transform="translate(-48.886)" fill="#fff"/>\
+      </g>\
+    </g>\
+    <g id="Group_7" data-name="Group 7" transform="translate(58.351 9.408)">\
+      <g id="Group_6" data-name="Group 6">\
+        <path id="Path_12" data-name="Path 12" d="M164.633,106.219a8.879,8.879,0,1,0,8.879,8.879A8.889,8.889,0,0,0,164.633,106.219Zm0,14.587a5.708,5.708,0,1,1,5.708-5.708A5.715,5.715,0,0,1,164.633,120.806Z" transform="translate(-155.754 -106.219)" fill="#fff"/>\
+      </g>\
+    </g>\
+  </g>\
+</svg>'
+);
+
+$('.leg-icon').prepend(
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85.645 83.834">\
+    <path id="chicken-leg" d="M105.145,47.944a27.61,27.61,0,0,1-5.251,16.3c-8.329,11.769-29.7,21-41.1,21a34.557,34.557,0,0,1-5.07-.543L43.22,95.022a14.793,14.793,0,0,1,.905,3.983c0,5.794-4.346,8.329-8.872,8.329-2.535,0-6.156-.724-8.148-3.983-.543-.724-.543-1.63-1.086-2.173a25.2,25.2,0,0,0-2.354-1.086,8.556,8.556,0,0,1-4.165-7.6,9.166,9.166,0,0,1,8.872-9.053c2.173,0,4.165,1.267,4.708,1.267.362,0,7.062-6.881,10.5-10.5.181-.181,0-.543,0-.905V66.775a54.087,54.087,0,0,1,1.992-9.053C51.73,38.891,63.5,23.5,80.339,23.5,94.462,23.5,105.145,33.821,105.145,47.944Zm-5.07,0c0,4.527-1.992,11.226-5.975,15.391-8.872,9.234-25.168,16.839-35.67,16.839-2.535,0-7.062-.724-8.691-3.983a14.892,14.892,0,0,1-1.086-3.621V67.68a35.536,35.536,0,0,1,1.63-7.6C56.076,43.417,64.767,28.751,80.7,28.751A18.907,18.907,0,0,1,100.075,47.944Zm-20.1-13.218c0,.543,0,.724-.362.905-1.449.543-3.259.724-4.527,1.267A10.675,10.675,0,0,0,71.1,39.072a28.685,28.685,0,0,0-5.07,5.432,29.135,29.135,0,0,0-3.078,5.07c-.362.543-2.535,7.062-3.8,7.062-1.086,0-1.086-.724-1.086-1.086,0-1.811,2.716-6.881,3.078-7.6,3.44-7.6,11.407-14.3,17.564-14.3C79.8,33.64,79.976,34.183,79.976,34.726Zm12.313,4.165A1.025,1.025,0,0,1,91.2,39.977c-1.267,0-3.621-2.354-4.346-2.9a.836.836,0,0,1-.543-.905A1.168,1.168,0,0,1,87.4,35.088C88.487,35.088,92.289,37.8,92.289,38.891Zm-44,43.637c-3.44,3.621-7.424,7.243-10.864,11.045-.181.181-.181.724-.181,1.267,0,1.63,1.63,2.173,1.63,4.346a3.606,3.606,0,0,1-3.8,3.8c-2.354,0-3.8-1.811-4.165-4.708-.181-1.811-2.535-1.992-3.621-2.173-1.63-.181-2.716-2.535-2.716-3.621a3.983,3.983,0,0,1,3.983-3.8c1.811,0,3.621,2.173,4.708,2.173,1.811,0,9.053-8.148,12.313-11.226C46.3,80.355,47.2,81.442,48.29,82.528ZM30,90.676a1.941,1.941,0,0,1-.362,1.086,7.9,7.9,0,0,1-1.811,1.449c0,.181-.181.362-.543.362-1.086,0-1.267-1.086-1.267-1.449,0-.724,1.449-3.078,2.716-3.078C29.821,89.046,30,90.676,30,90.676Z"\
+     transform="translate(-19.5 -23.5)" fill="#111" fill-rule="evenodd" opacity="0.08"/>\
+  </svg>'
+);
+
+$('.dumpling-icon').prepend(
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104.433 99.238">\
+    <path id="dumplings" d="M183.67,63.372c3.117,4.676,7.274,8.833,9.872,14.028a17.621,17.621,0,0,1,2.6,7.274c0,2.078-2.078,10.911-5.2,10.911-1.039,0-.52-.52-1.039-.52,0-.52-.52-.52-.52-2.078,0-1.039,2.6-6.754,2.6-7.794,0-4.157-4.676-10.911-7.794-14.028-1.559,3.117-4.676,7.794-4.676,9.352,0,3.117,4.157,2.078,4.157,4.676a3.658,3.658,0,0,1-2.078,2.6c-4.157,0-6.235-4.676-6.235-7.274,0-4.676,4.676-8.313,4.676-10.911,0-1.559-.52-1.559-.52-3.117-.52,0-.52-.52-1.039-1.039-1.039,1.559-1.559,3.637-2.6,5.2s-8.313,5.715-8.313,8.833c0,1.559,1.039,2.6,1.559,3.637v2.078c-.52.52-.52.52-2.078.52-3.117,0-3.637-5.2-3.637-6.235,0-6.754,10.391-8.313,10.391-15.067a2.86,2.86,0,0,0-1.039-2.6c-3.117,11.431-19.744,5.2-15.587,18.7-.52,0-.52.52-2.078.52-2.6,0-2.6-4.157-2.6-4.676,0-1.559,1.039-5.2,2.6-6.754,3.117-3.117,9.872-3.637,11.95-6.754,2.078-3.637,1.039-9.352,6.235-9.352C176.4,53.5,180.553,58.7,183.67,63.372Zm-20.263-5.2c0,.52.52.52.52,1.559,0,1.559-.52,1.559-1.039,2.078h-2.6c0-.52-.52-1.039-.52-2.078,0-1.559.52-1.039,1.039-1.559Zm-6.754,3.637c0,.52.52.52.52,1.559,0,2.078-11.95,5.715-11.95,17.146,0,14.028,22.861,17.665,29.615,17.665,1.559,0,6.235-.52,11.431-1.039,0,.52.52.52.52,1.559,0,3.117-11.431,3.637-11.431,3.637-9.872,0-34.292-4.676-34.292-22.341,0-7.274,3.637-14.028,13.509-18.185ZM123.4,80c0,1.039-2.6,2.6-4.676,4.157-2.078.52-5.715-1.559-7.274,2.078-.52.52,0,2.6-.52,3.637s-2.078,3.117-2.078,4.157c0,3.117,3.637,3.637,4.157,3.637,1.559,0,2.078-1.039,3.637-1.039,1.039,0,3.117,2.6,4.676,2.6,2.078,0,2.6-3.117,5.2-5.2a4.4,4.4,0,0,0,5.2-4.157c0-2.078-2.078-2.078-4.676-4.676V82.6c.52,0,0-.52,1.559-.52,5.2,0,7.274,5.2,7.274,8.313a7.243,7.243,0,0,1-2.078,4.676c-1.039,1.039-3.637,2.078-4.676,3.117-2.078,1.039-5.715,5.2-7.794,5.2-1.039,0-2.6-1.559-4.157-1.559-2.078-.52-4.676,0-6.235-.52-5.2-.52-5.715-5.715-5.715-7.794,0-1.039,2.078-5.2,2.078-7.794.52-1.559,4.157-5.715,5.715-5.715,1.039-.52,3.117,0,4.676-.52,1.039-.52,2.078-1.559,3.637-1.559A1.9,1.9,0,0,1,123.4,80Zm19.224,17.665a3.658,3.658,0,0,1-2.078,2.6c-1.559,0-2.078-1.039-2.078-2.6,0-1.039.52-1.559,2.078-1.559C141.585,96.1,142.624,96.624,142.624,97.663Zm14.028,6.754a58.871,58.871,0,0,0,15.587,3.117c0,.52.52.52.52,1.559,0,6.235-10.391-2.078-10.391,5.2,0,1.039,6.754,6.754,6.754,13.509,0,19.744-32.213,24.939-40.526,24.939a48.437,48.437,0,0,1-7.274-1.039c-4.157-1.039-9.352-2.6-11.95-7.274-2.078-3.117-1.559-6.754-3.117-9.352-.52-1.039-2.6-1.559-3.637-2.6a16.583,16.583,0,0,1-3.117-8.313,2.86,2.86,0,0,1,1.039-2.6c6.754-.52,7.794-6.235,11.95-6.235h5.2c0,.52.52.52.52,1.559,0,1.559-.52,1.559-1.039,1.559-4.157.52-9.872,4.676-13.509,7.794a17.032,17.032,0,0,0,3.117,4.157c1.039-.52,1.559-2.078,2.6-2.078,3.117,0,1.559,5.715,1.559,6.754,0,11.431,10.391,13.509,17.665,13.509,7.794,0,36.37-5.2,36.37-20.783,0-5.2-6.754-10.911-6.754-13.509,0-1.559,1.039-2.6,1.559-3.637-1.559-1.039-5.2-2.6-6.754-2.6-.52,0-7.794,4.676-9.352,4.676s-8.833-2.6-9.872-2.6c-4.157,0-7.794,6.754-8.833,6.754a1.9,1.9,0,0,1-2.078-2.078,3.053,3.053,0,0,1,1.039-2.6c3.117-3.637,5.715-6.235,9.872-6.235,1.039,0,8.833,2.6,9.872,2.6,1.559,0,3.117-1.559,4.157-2.078-.52-1.559-2.6-2.6-2.6-4.157a1.9,1.9,0,0,1,2.078-2.078C148.339,100.261,153.016,103.379,156.653,104.418Zm45.2,5.2c1.559,1.039,2.078,4.157,2.078,5.2a8.38,8.38,0,0,1-1.559,4.676c-2.6,2.6-5.2,4.676-8.313,7.274a7.509,7.509,0,0,1-3.637,1.039c-1.039,0-2.078-1.039-3.117-1.039-1.559-.52-4.157.52-5.715,0a7.851,7.851,0,0,1-6.235-7.274c0-1.559,1.559-4.676,1.559-7.274.52-1.039.52-3.117,2.078-4.157,3.637-2.6,10.911-4.676,12.47-4.676C194.581,103.379,198.218,105.976,201.855,109.613Zm-3.637,2.6c.52,0,1.559,1.039,1.559,2.6a3.452,3.452,0,0,1-2.078,2.6c-5.715-.52-2.6,5.715-7.274,5.715-1.039,0-2.6-1.559-4.157-1.559-1.039,0-2.078,1.039-3.637,1.039-3.117,0-2.6-2.078-2.6-3.117,0-1.559,1.559-3.637,1.039-5.2a7.384,7.384,0,0,1,1.039-3.117,17.675,17.675,0,0,1,5.2-.52c1.559-1.039,3.117-2.6,4.157-2.6C193.022,108.055,196.14,111.172,198.218,112.211Zm-46.242,3.637a14.2,14.2,0,0,0,4.157,7.274v2.6c-.52,0-.52.52-2.078.52-4.157,0-5.715-8.313-5.715-8.313,0-1.559.52-3.117,2.078-3.117C151.457,114.809,151.976,115.329,151.976,115.848Zm-7.794,9.872v2.6c-.52,0-.52.52-1.559.52-3.117,0-4.676-8.313-4.676-8.833,0-1.039-.52-2.6,1.559-2.6C140.546,117.407,144.183,125.72,144.183,125.72Zm-11.95,2.078a8.38,8.38,0,0,1-1.559,4.676H128.6c-.52-2.6-.52-5.715-1.559-11.43h2.6C131.713,124.161,132.233,125.2,132.233,127.8Zm-10.911,1.559a50.1,50.1,0,0,1-1.039,6.235c-1.039,0-2.078.52-3.637,0V125.72c.52-.52.52-1.039,2.078-1.039C120.8,124.681,121.322,128.318,121.322,129.357Z" transform="translate(-99.5 -53.5)"\
+     fill="#111" fill-rule="evenodd" opacity="0.1"/>\
+  </svg>'
+);
+
+$('.valley-icon').prepend(
+  '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" viewBox="0 0 254 364">\
+    <path d="M127.320,6.040 C128.040,6.040 131.640,3.880 133.800,2.680 C134.520,5.560 134.760,10.120 136.920,13.000 C140.280,17.320 146.040,19.960 \
+    150.120,22.840 C155.640,26.920 163.560,32.680 168.360,38.920 C171.960,43.480 174.120,48.520 174.120,53.080 C174.120,53.800 173.880,55.960 \
+    173.640,57.160 C170.760,55.960 167.400,54.760 164.760,53.080 C162.120,51.640 162.360,47.800 162.360,45.880 C159.960,44.440 157.320,43.240\
+    154.680,41.800 L162.600,41.800 C162.120,40.600 161.640,39.640 161.160,39.160 C157.080,33.640 151.560,26.440 145.080,21.640 C139.320,17.560 \
+    131.160,15.880 124.680,15.880 C118.200,15.880 110.520,17.800 104.520,25.720 C103.080,27.640 100.680,29.800 99.240,31.720 C96.360,35.080 \
+    93.960,39.880 92.520,43.480 C91.080,47.080 89.640,51.400 88.920,55.240 C88.200,58.120 86.760,68.680 86.760,73.240 L86.760,88.600 L87.960,101.320\
+      C87.720,102.280 88.200,103.720 87.240,104.920 C83.640,102.520 81.240,98.200 80.280,95.080 C79.080,91.240 79.080,84.040 79.080,83.560 L79.080,74.680 \
+      C79.800,60.760 82.920,45.880 90.600,31.720 L83.880,25.960 L92.520,26.920 C92.520,26.920 92.760,26.680 92.760,26.440 L90.120,18.760 C91.320,18.760 \
+      92.760,18.760 98.280,19.000 C98.760,16.360 99.240,13.720 99.480,11.080 C101.640,11.800 104.040,12.280 106.920,13.000 C107.400,10.840 107.880,8.680 \
+      108.120,6.520 C111.000,6.760 115.560,7.240 116.040,7.240 C117.480,7.240 121.560,1.000 122.040,0.760 C123.720,2.440 126.840,6.040 127.320,6.040 ZM132.360,39.160 \
+      C132.360,43.240 128.760,46.120 125.400,46.120 C121.320,46.120 118.680,42.520 118.680,39.160 C118.680,35.080 122.040,32.440 125.400,32.440 C129.480,32.440 \
+      132.360,35.800 132.360,39.160 ZM161.880,51.160 C150.120,53.800 141.720,60.760 141.720,70.840 C141.720,77.320 144.840,84.280 149.880,91.000 C162.120,108.040 \
+      178.680,111.880 191.400,127.240 C195.960,132.520 197.880,139.720 199.080,145.480 C200.280,151.480 201.480,157.480 201.480,163.480 C201.480,169.240\
+      200.520,175.720 197.640,181.960 C189.240,200.680 167.400,218.440 150.840,218.440 C145.800,218.440 143.160,217.720 137.640,215.800 C140.760,214.840 \
+      144.120,213.400 147.240,212.200 C149.640,211.000 152.520,209.560 155.160,208.360 C161.400,205.240 170.280,197.560 174.360,190.360 C176.040,187.480\
+        177.720,184.360 178.680,181.240 C180.120,176.680 184.440,164.680 184.440,158.920 C184.440,138.520 156.600,117.160 137.640,99.400 C134.280,96.040 \
+        129.480,84.760 129.480,80.440 L129.480,73.000 C131.640,61.960 135.000,48.760 147.960,48.760 C151.800,48.760 159.240,50.440 161.880,51.160 ZM114.600,106.600\
+        C84.360,116.680 65.880,136.360 65.880,160.840 C65.880,165.400 66.600,170.440 67.560,175.240 C69.240,182.920 72.360,191.320 78.840,199.480 C86.040,208.360\
+          94.440,212.920 102.360,215.320 C104.520,216.040 107.400,216.760 109.800,217.240 C107.640,217.240 103.800,217.480 103.080,217.480 C83.160,217.480 62.760,208.360 \
+          54.840,180.760 C54.360,178.840 52.440,170.440 52.440,167.560 L52.440,159.640 C52.680,157.240 53.160,154.600 53.400,152.440 C57.480,128.680 84.600,103.720 \
+          105.480,103.720 C108.360,103.720 111.720,104.200 114.600,106.600 ZM16.200,133.240 L130.920,302.440 L238.920,133.240 L252.600,133.240 L127.080,362.200 \
+          L1.320,133.240 L16.200,133.240 Z" fill-rule="odd-even"/>\
+</svg>'
+)
+$('.chick-icon').prepend(
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112.647 100.789">\
+    <g id="Group_2" data-name="Group 2" transform="translate(-988.353 -2559)" opacity="0.1">\
+      <path id="Path_3" data-name="Path 3" d="M105.033,78.034a5.6,5.6,0,0,1,1.744,3.836A5.432,5.432,0,0,1,101.2,87.1c-1.046,0-2.441-.7-3.139-.7-1.046,0-4.185,3.836-4.185,4.534,0,1.046.7,2.79.7,3.488,0,1.046-.7,2.79-.7,3.836,0,.349,14.3,9.416,14.3,20.576a20.564,20.564,0,0,1-2.441,8.37c4.534,2.79,9.416,3.488,9.416,8.719,0,11.509-41.85,13.95-45.338,13.95H47.489c-1.046-.349-44.989-1.744-44.989-13.95,0-5.231,4.534-5.929,9.416-8.719-2.441-4.534-2.441-5.58-2.441-8.719a20.567,20.567,0,0,1,5.231-13.95c.349-.349.7-.7.349-1.046,11.509-13.95,25.808-17.438,39.06-17.438,11.509,0,23.018,4.185,23.366,4.185,1.046,0,2.093-1.046,2.79-1.4A13.17,13.17,0,0,1,89.688,87.1c1.395-1.046,4.185-3.488,4.185-4.534,0-.7-1.4-2.79-1.4-3.836a5.432,5.432,0,0,1,5.58-5.231C101.2,73.5,101.2,74.895,105.033,78.034ZM70.507,93.728C62.485,95.471,59,103.144,59,108.375a15.323,15.323,0,0,0,15.345,15.694c8.719,0,15-7.324,16.043-17.089,0-.7,1.046-1.744,1.744-2.79,5.231,4.185,10.463,9.068,10.463,14.648,0,12.555-28.946,15.694-34.178,15.694H48.884c-2.093-.349-33.829-1.744-33.829-16.043a20.476,20.476,0,0,1,6.278-13.6C31.8,94.425,43.653,91.635,54.115,91.635,62.137,91.635,58.649,91.286,70.507,93.728Zm18.484,1.046c0,3.139-2.79,6.278-3.836,9.416-1.4,3.139-1.046,6.626-3.488,10.463-1.744,2.79-5.58,3.488-7.324,3.488-6.278,0-9.416-5.231-9.416-9.765,0-2.441.349-4.534,2.79-6.626,2.093-2.441,5.929-2.79,8.719-4.185,2.441-1.4,7.324-4.883,10.463-4.883C88.293,92.681,88.991,92.681,88.991,94.774ZM21.681,134.532c3.139,1.4,19.181,5.929,26.505,5.929H69.46c7.324-1.046,15.345-2.092,23.018-4.534,2.79-1.046,7.673-3.836,8.37-3.836,1.4,0,7.673,3.139,8.719,3.836-5.231,4.883-31.388,8.37-41.153,8.37H48.884c-15-1.744-29.993-1.744-40.8-8.37.7-.7,6.975-3.836,8.37-3.836C17.148,132.09,19.589,133.834,21.681,134.532Z"\
+      transform="translate(985.853 2509.913)" fill-rule="evenodd"/>\
+      <path id="Path_4" data-name="Path 4" d="M82.144,5.941c0,1.046-1.046,3.836-1.046,4.534,0,3.836,4.185,8.37,4.185,13.6,0,1.4-.7,7.324-3.139,7.324a2.931,2.931,0,0,1-2.79-2.79c0-1.046.7-3.488.7-4.534,0-5.231-3.836-6.626-3.836-13.6,0-1.046.349-6.975,3.488-6.975A2.321,2.321,0,0,1,82.144,5.941Zm13.95,4.534c0,.7-1.046,3.836-1.046,4.534,0,2.79,4.185,9.068,4.185,13.6,0,1.744-.7,6.975-3.488,6.975A2.2,2.2,0,0,1,93.3,33.144c0-1.046.7-3.488.7-4.534,0-4.883-3.836-7.673-3.836-13.6,0-2.093.349-6.975,3.488-6.975A2.2,2.2,0,0,1,96.094,10.475ZM81.446,54.418c0,.7-.349,2.441-2.092,2.441-.7,0-2.093,0-2.441.349-1.4.349-3.488.7-4.534,1.4a19.914,19.914,0,0,0-7.324,4.534c-4.534,3.488-5.929,6.975-8.021,10.811a2.109,2.109,0,0,1-2.093,1.046A2.2,2.2,0,0,1,52.5,72.553c0-2.441,5.929-10.811,7.324-11.858a43.912,43.912,0,0,1,9.765-6.626,37.106,37.106,0,0,1,9.416-2.441C80.749,51.628,81.446,53.372,81.446,54.418Z"\
+      transform="translate(953.291 2555.5)" fill-rule="evenodd"/>\
+    </g>\
+   </svg>'
+);
+</script>
+</body>
+
+</html>

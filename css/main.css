@@ -831,8 +831,7 @@ position:relative;
   position: relative;
 }
 .checkout-banner .img-container{
-  height:250px;
- 
+  height:250px; 
 }
 .sm-u-line {
   display: block;
@@ -901,7 +900,6 @@ position:relative;
   font-size: 24px;
   font-weight:800;
 }
-
 /* =======================user dashnoard design ============================  */
 .profile-img.img-container{
   height: 200px;
@@ -938,7 +936,9 @@ position:relative;
   font-weight: 500;
   word-break:break-all
 }
-
+.user-side-img .img-container {
+  height: 300px;
+}
 /* main-dashboard  */
 .dashboard-main{
   margin-left: 30px;
@@ -973,6 +973,81 @@ position:relative;
 .auth-icon .img-container{
  border-radius: 50%;
  height:inherit;
+}
+/* ============================user dashboard design=================== */
+/* dashboard page  */
+.user-widget{
+  margin-top: 50px;
+}
+.widget-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f2f2f2;
+}
+.widget-wrap:first-child .widget-box{
+  background: #1c1c1c; 
+}
+.widget-wrap:first-child .widget-box .wc-icon i{
+  background: #1c1c1c; 
+  color: rgba(255,255,255,0.1);
+  font-size:60px;
+}
+.widget-box .wc-icon i{
+  color: rgba(0, 0, 0, 0.1);
+  font-size:45px;
+  padding-right: 15px;
+}
+.widget-box .widget-num{
+  font-size:40px;
+}
+.widget-box .widget-txt{
+  font-size:15px;
+  font-weight: 600;
+  padding: 0 10px 0 20px ;
+}
+.order-container {
+  max-height:350px;
+  overflow-y: scroll;
+}
+.order-history {
+  max-height:550px;
+  overflow-y: scroll;
+}
+.order-container::-webkit-scrollbar{
+  display: none;
+}
+.order-summary-wrap{
+  margin-top: 40px;
+}
+.item-overall-wrap{
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+.item-overall-wrap .img-container{
+  height:85px;
+  width: 85px;
+}
+.overall-info{
+  margin-left: 15px;
+}
+.overall-content .overall-ow{
+  border-right:2px solid #f2f2f2;
+  padding:0 15px;
+  margin-top: 5px;
+}
+.overall-content .overall-ow:first-child{
+  margin-left: -15px;
+  /* background: red; */
+}
+.overall-content .overall-ow:last-child{
+  border:none
+}
+.overall-content .overall-ow .text-bold{
+  font-weight: 600;
 }
 @media only screen and (max-width:992px){
   /* .custom-nav li {
